@@ -1,0 +1,12 @@
+@import "../../settings/settings.scss";
+
+.HeaderSection {
+  //   background-color: goldenrod;
+
+  display: flex;
+  align-items: center;
+
+  height: $header_height;
+
+  z-index: 20;
+}

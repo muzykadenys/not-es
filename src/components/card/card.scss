@@ -1,0 +1,82 @@
+@import "../../settings/settings.scss";
+
+.CardSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-color: rgb(255, 199, 94);
+  height: $card_width;
+  width: $card_width;
+
+  clip-path: inset(0 0 round $card_round);
+  // border-radius: $card_round;
+
+  cursor: pointer;
+
+  .CardSection_Wraper {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    height: 80%;
+
+    .CardSection_Wraper_WrapTitle {
+      display: flex;
+      flex: 1;
+
+      .CardSection_Wraper_WrapTitle_Emoji {
+        font-size: 22px;
+        white-space: nowrap;
+        padding-right: 5px;
+      }
+
+      .CardSection_Wraper_WrapTitle_Title {
+        width: 100%;
+     
+
+        font-size: 22px;
+        font-weight: 500;
+      }
+    }
+
+    .CardSection_Wraper_Time {
+      font-size: 14px;
+    }
+  }
+
+  .CardSection_Fold {
+    pointer-events: none;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    position: absolute;
+
+    width: $card_width;
+    height: $card_width;
+
+    .CardSection_Fold_El {
+      scale: 0;
+
+      // width: 40px;
+      // height: 40px;
+      // background-color: green;
+      border-top-left-radius: $card_round;
+      border-left: 50px solid rgb(0, 0, 0);
+      border-bottom: 50px solid rgb(255, 255, 255);
+      transform-origin: bottom right;
+
+      // transition: scale 0.5s ease-out, border 0.5s ease-out;
+    }
+  }
+  // &:hover {
+  //   .CardSection_Fold {
+  //     .CardSection_Fold_El {
+  //       scale: 1.8;
+  //     }
+  //   }
+  // }
+}

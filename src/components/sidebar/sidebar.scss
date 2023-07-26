@@ -1,0 +1,94 @@
+@import "../../settings/settings.scss";
+
+$addBtn_width: 40px;
+$circle_width: 20px;
+$circle_margin_top: 40px;
+
+.SidebarSection_TransitionCard{
+  pointer-events: none;
+
+    position: absolute;
+    width: $circle_width;
+    height: $circle_width;
+
+    background-color: rgba(128, 255, 0, 0.367);
+    opacity: 0;
+
+    // transform: translate(24px, 200px);
+
+    z-index: 10;
+}
+
+
+.SidebarSection {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-right: 2px solid rgb(246, 246, 246);
+
+  min-width: $sidebar_width;
+  max-width: $sidebar_width;
+  height: 100vh;
+  
+
+  .SidebarSection_Logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $header_height;
+
+    font-weight: 800;
+  }
+
+  .SidebarSection_WrapAddCard {
+    margin-top: $header_height;
+    z-index: 1;
+
+
+    .SidebarSection_AddCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      border-radius: 333px;
+      background-color: black;
+
+      color: white;
+      font-size: 28px;
+      font-weight: 200;
+      text-align: center;
+
+      width: $addBtn_width;
+      height: $addBtn_width;
+
+    }
+
+    .SidebarSection_Circles {
+      filter:url('#goo');
+
+      margin-top: calc(-1 * $addBtn_width / 2);
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      z-index: -1;
+
+      .SidebarSection_Circles_El {
+        cursor: pointer;
+
+        position: absolute;
+
+        width: $circle_width;
+        height: $circle_width;
+
+        background-color: red;
+        border-radius: 333px;
+      }
+    }
+  }
+}
