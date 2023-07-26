@@ -40,15 +40,17 @@ const Card: FC<any> = ({
   };
 
   const hoverEnterCard = () => {
-    gsap.to(foldRef.current, { scale: 1.8, duration: 0.5 });
-    gsap.to(cardRef.current, { borderBottomRightRadius: 50, duration: 0.3 });
+    foldRef.current?.classList.add("active");
+    cardRef.current?.classList.add("activeFold");
+    // gsap.to(cardRef.current, { borderBottomRightRadius: 50, duration: 0.3 });
   };
   const hoverExitCard = () => {
-    gsap.to(foldRef.current, { scale: 0, duration: 0.5 });
-    gsap.to(cardRef.current, {
-      borderBottomRightRadius: card_radius,
-      duration: 0.3,
-    });
+    foldRef.current?.classList.remove("active");
+    cardRef.current?.classList.remove("activeFold");
+    // gsap.to(cardRef.current, {
+    //   borderBottomRightRadius: card_radius,
+    //   duration: 0.3,
+    // });
   };
 
   const createOpenCard = () => {

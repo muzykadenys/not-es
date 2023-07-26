@@ -14,6 +14,8 @@
   // border-radius: $card_round;
 
   cursor: pointer;
+  
+  transition: border-radius 0.2s ease-in-out;
 
   .CardSection_Wraper {
     display: flex;
@@ -69,7 +71,11 @@
       border-bottom: 50px solid rgb(255, 255, 255);
       transform-origin: bottom right;
 
-      // transition: scale 0.5s ease-out, border 0.5s ease-out;
+      transition: scale 0.5s ease-out, border 0.5s ease-out;
+    }
+
+    .active{
+      scale: 1.8;
     }
   }
   // &:hover {
@@ -79,4 +85,8 @@
   //     }
   //   }
   // }
+}
+
+.activeFold{
+  border-bottom-right-radius: 50px;
 }
