@@ -66,8 +66,8 @@
       // width: 40px;
       // height: 40px;
       // background-color: green;
-      margin-right: -1px;
-      margin-bottom: -1px;
+      margin-right: -2px;
+      margin-bottom: -2px;
 
       border-top-left-radius: $card_round;
       border-left: 50px solid rgb(0, 0, 0);
@@ -81,13 +81,6 @@
       scale: 1.8;
     }
   }
-  // &:hover {
-  //   .CardSection_Fold {
-  //     .CardSection_Fold_El {
-  //       scale: 1.8;
-  //     }
-  //   }
-  // }
 }
 
 .activeFold{
